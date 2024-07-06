@@ -1,4 +1,4 @@
-﻿using projec6;
+using projec6;
 
 namespace projec6
 {
