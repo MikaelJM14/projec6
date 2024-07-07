@@ -63,28 +63,32 @@ namespace projec6
                             Console.WriteLine();
                             while (true)
                             {
-                                Console.Clear();
-                                Console.WriteLine("Add a grade");
+                                Console.WriteLine("Add a new grade");
                                 Statistics statistics = new Statistics();
-                                double text5 = double.Parse(Console.ReadLine());
-                                //(text5);
-                                Console.WriteLine($"Average: {statistics.Average:N2}");
+                                double text4 = double.Parse(Console.ReadLine());
+                                statistics.Add1(text4);
+                                if (text4 > 100)
+                                    break;
+                                Console.WriteLine($"Average: {statistics.Average:N4}");
                                 Console.ForegroundColor = ConsoleColor.Gray;
                             }
+                            break;
                         case "3":
                             Console.Clear();
                             Console.WriteLine("Add a grade");
                             Console.WriteLine();
                             while (true)
                             {
-                                Console.Clear();
                                 Console.WriteLine("Add a new grade");
-                                double text6 = double.Parse(Console.ReadLine());
-                                Add2(text6);
                                 Statistics statistics = new Statistics();
-                                Console.WriteLine($"Average: {statistics.Average:N2}");
+                                double text4 = double.Parse(Console.ReadLine());
+                                statistics.Add2(text4);
+                                if (text4 > 100)
+                                    break;
+                                Console.WriteLine($"Average: {statistics.Average:N4}");
                                 Console.ForegroundColor = ConsoleColor.Gray;
                             }
+                            break;
                         case "4":
                             Console.Clear();
                             Console.WriteLine("Add a grade");
@@ -92,12 +96,15 @@ namespace projec6
                             while (true)
                             {
                                 Console.WriteLine("Add a new grade");
-                                double text7 = double.Parse(Console.ReadLine());
-                                Add3(text7);
                                 Statistics statistics = new Statistics();
-                                Console.WriteLine($"Average: {statistics.Average:N2}");
+                                double text4 = double.Parse(Console.ReadLine());
+                                statistics.Add3(text4);
+                                if (text4 > 100)
+                                    break;
+                                Console.WriteLine($"Average: {statistics.Average:N4}");
                                 Console.ForegroundColor = ConsoleColor.Gray;
                             }
+                            break;
                         case "5":
                             Console.Clear();
                             Console.WriteLine("Add a grade");
@@ -105,12 +112,15 @@ namespace projec6
                             while (true)
                             {
                                 Console.WriteLine("Add a new grade");
-                                double text8 = double.Parse(Console.ReadLine());
-                                Add4(text8);
                                 Statistics statistics = new Statistics();
-                                Console.WriteLine($"Average: {statistics.Average:N2}");
+                                double text4 = double.Parse(Console.ReadLine());
+                                statistics.Add4(text4);
+                                if (text4 > 100)
+                                    break;
+                                Console.WriteLine($"Average: {statistics.Average:N4}");
                                 Console.ForegroundColor = ConsoleColor.Gray;
                             }
+                            break;
                         default:
                             Console.Clear();
                             Console.WriteLine("Add a grade");
@@ -118,12 +128,15 @@ namespace projec6
                             while (true)
                             {
                                 Console.WriteLine("Add a new grade");
-                                double text9 = double.Parse(Console.ReadLine());
-                                Add5(text9);
                                 Statistics statistics = new Statistics();
-                                Console.WriteLine($"Average: {statistics.Average:N2}");
+                                double text4 = double.Parse(Console.ReadLine());
+                                statistics.Add5(text4);
+                                if (text4 > 100)
+                                    break;
+                                Console.WriteLine($"Average: {statistics.Average:N4}");
                                 Console.ForegroundColor = ConsoleColor.Gray;
                             }
+                            break;
                     }
                     break;
                 case "2":
@@ -181,39 +194,6 @@ namespace projec6
                     new Student(text2, text3, text11);
                     break;
             }
-        }
-
-        public static void Add(double grade)
-        {
-            List<double> DoubleMaths = new List<double>();
-            DoubleMaths.Add(grade);
-        }
-
-        public static void Add1(double grade)
-        {
-            List<double> DoublesEnglish = new List<double>();
-            DoublesEnglish.Add(grade);
-        }
-        public static void Add2(double grade)
-        {
-            List<double> DoublesScience = new List<double>();
-            DoublesScience.Add(grade);
-        }
-        public static void Add3(double grade)
-        {
-            List<double> DoublesGeography = new List<double>();
-            DoublesGeography.Add(grade);
-        }
-        public static void Add4 (double grade)
-        {
-            List<double> DoublesComputerScience = new List<double>();
-            DoublesComputerScience.Add(grade);
-        }
-
-        public static void Add5(double grade)
-        {
-            List<double> Totals = new List<double>();
-            Totals.Add(grade);
         }
     }
 }
